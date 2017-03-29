@@ -1,0 +1,56 @@
+<!--
+Chapter 4: CSS Grids, Frameworks, UI Kits and Flexbox
+19 - HTML for the Build a Sample Page with the Custom CSS Grid section
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Mastering RWD with HTML5 &amp; CSS3</title>
+        <link href="build/css/site-styles.css" rel="stylesheet" type="text/css"/>
+         
+        <!--[if lt IE 9]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <h1>Basic Layout Using a Custom CSS Grid</h1>
+        <main class="container-12" role="main">
+            <section class="grid  grouping">  
+                <header class="grid-12" role="banner">Header (.grid-12)</header>
+                <nav class="grid-4" role="navigation">Nav (.grid-4)</nav>
+                <section class="grid-8">
+                    <div class="grid-row grouping">
+                        <div class="grid-6 black">.grid-6a</div>
+                        <div class="grid-6 black">.grid-6b</div>
+                    </div>
+                    <div class="grid-row grouping">
+                        <div class="grid-4 black">.grid-4</div>
+                        <div class="grid-4 black">.grid-4</div>
+                        <div class="grid-4 black">.grid-4</div>
+                    </div>
+                    <div class="grid-row grouping">
+                        <div class="grid-3 black">.grid-3</div>
+                        <div class="grid-3 black">.grid-3</div>
+                        <div class="grid-3 black">.grid-3</div>
+                        <div class="grid-3 black">.grid-3</div>
+                    </div>
+                    <div class="grid-row grouping">
+                        <div class="grid-2 black">.grid-2</div>
+                        <div class="grid-7 black">.grid-7</div>
+                        <div class="grid-3 black">.grid-3</div>
+                    </div>
+                    <div class="grid-row grouping">
+                        <div class="grid-12 content grouping">content</div>
+                       
+                    </div>
+                     
+                </section>
+               
+                <footer class="grid-12" role="contentinfo">Footer (.grid-12)</footer>
+            </section>
+        </main>
+    </body>

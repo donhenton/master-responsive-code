@@ -1,0 +1,65 @@
+@import "components/_reset.scss";
+@import "components/_typography.scss";
+@import "components/_grid.scss";
+ 
+ 
+
+.grid
+{
+    border: thin solid yellow;
+    background-color: goldenrod;
+    text-align: center;
+}
+
+.content
+{
+    
+    background-color:  darkslategrey;
+    height: 100px;
+    padding-top: 45px;
+}
+
+header,footer
+{
+    height: 100px;
+    text-align:center;
+    padding-top: 40px;
+    font-size: 20px;
+}
+
+nav
+{
+    height: 300px;
+    text-align: center;
+    padding-top: 140px;
+    background-color: $blue_color;
+
+}
+
+
+.black
+{
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+
+}
+
+header 
+{
+    background-color: $green_color;
+}
+footer
+{
+    background-color: $red_color;
+}
+
+
+
+
+body
+{
+
+    margin: 10px;
+    color: aliceblue;
+}

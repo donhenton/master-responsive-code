@@ -1,0 +1,53 @@
+/* typography ---------------------- */
+@import url(https://fonts.googleapis.com/css?family=Palanquin:400,700); /* font-family 'Palanquin' sans serif */
+@import url(https://fonts.googleapis.com/css?family=Orbitron:400,700|Roboto:400,700italic,700);
+/* colors */
+
+$blue-color: #16174f;
+$red-color: #963019;
+$white-color: #f6f1ed; //this will have black text all others white
+$green-color: #667467;
+
+/* ------ */
+ 
+body
+{
+    font-family: Roboto, Arial, Sans-Serif ;
+    font-size: 14px;
+    font-weight: 400;
+     
+}
+
+
+// font:   italic     small-caps   normal     45px/150%            'arial'
+// font: font-style font-variant font-weight font-size/line-height font-family;  minimum font-size and font-family
+h1
+{
+    // font-family: 'Palanquin, Arial, Sans-Serif' ;
+     font-size: 40px;
+     font-weight: 700;
+     color: $blue-color;
+}
+h2
+{
+     //font-family: 'Palanquin, Arial, Sans-Serif' ;
+     font-size: 32px;
+     font-weight: Normal;
+     color: $red-color;
+}
+h3
+{
+    //font-family: 'Palanquin, Arial, Sans-Serif' ;
+     font-size: 25px;
+     font-weight: Normal;
+     color: $green-color;
+}
+h4
+{
+   // font-family: 'Palanquin, Arial, Sans-Serif' ;
+     font-size: 18px;
+     font-weight: Normal;
+     color: $green-color;
+}
+/* typography ---------------------- */
+
