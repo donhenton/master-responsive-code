@@ -1,6 +1,4 @@
-@mixin forLargeScreens($media) {
-    @media (min-width: $media/16+em) { @content }
-}
+
 //Main container
 .main-container {
     width: 100%;

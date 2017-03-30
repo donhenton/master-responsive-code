@@ -1,4 +1,5 @@
 @import "components/_reset.scss";
+@import "components/_mixins.scss";
 @import "components/_typography.scss";
 @import "components/_grid.scss";
 @import "components/_flex-box-grid.scss";
@@ -68,14 +69,21 @@ body
     color: aliceblue;
 }
 
-.three-column-demo
+.main-container.three-column-demo
 {
+    background-color: slategray;
+    padding: 0 0;
+    margin: 0 auto;
+    text-align: left;
     .flex-container
     {
 
         align-items: center;  
         justify-content: center;
         
+        
+
+
     }
     .box-item
     {
@@ -83,14 +91,24 @@ body
         display: flex;
         align-items: center;  
         justify-content: center;
-        border: thin solid blue;
+        color: black;
+        background-color:  bisque;
+        margin-top: 1%;
+
         min-height: 110px;
-        width: 200px;
+        @include forLargeScreens(640) {
+
+            width: 33%;
+            margin : 1%;
+            &:first-of-type { margin-left: 0; }
+        &:last-of-type { margin-right: 0; }
+        }
         .center-item
         {
-            border: thin solid red;
+            border: thin solid $green_color;
+            padding: 10px;
 
-             
+
 
         }
 
