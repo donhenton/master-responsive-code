@@ -1,0 +1,62 @@
+.menu-demo
+{ 
+    //Menu itself
+    nav 
+    { 
+        background-color: #aaa;
+        padding: 0;
+        height: auto;
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            max-width: 980px;
+            margin: auto;
+            padding: 2px;
+            list-style: none;
+           // border: #999 1px dotted;
+            //List items
+            li {
+                //Expand to use any available space
+                //flex-grow: 1;
+                //flex-basis: 100%;
+                flex: 1 100%;
+                margin: 3px;
+                text-align: center;
+                
+                @include forLargeScreens(320) {
+                    flex-basis: 30%;
+                }
+                @include forLargeScreens(426) {
+                    flex-basis: 0;
+                }
+                //Links themselves
+                a {
+                    display: block;
+                    padding: 1em;
+                    color: white;
+                    text-decoration: none;
+                    background: #ccc;
+                    
+                    @include forLargeScreens(426) {
+                        background: none;
+                    }
+                }
+            }
+        }
+    }
+    //Main Container
+    .main-container {
+        max-width: 980px;
+        margin: auto;
+        padding: 20px;
+        background: #eee;
+        color: black;
+    }
+
+    //Styling stuff not needed for demo
+
+
+
+
+}
