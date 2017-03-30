@@ -1,0 +1,60 @@
+<!--
+Chapter 4: CSS Grids, Frameworks, UI Kits and Flexbox
+20 - HTML for the Build a Sample Page with Flexbox section
+-->
+
+<!DOCTYPE html>
+<!--[if IE 8]> <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Basic Layout Using Flexbox</title>
+    <!--[if lt IE 9]>
+     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if !IE]><!-->
+    <script>
+    	if (/*@cc_on!@*/false && document.documentMode === 10) {
+    		document.documentElement.className+=' ie10';
+    	}
+    </script>
+    <!--<![endif]-->
+</head>
+<body>
+    <h1>Basic Layout Using Flexbox</h1>
+    <main class="main-container" role="main">
+        <header role="banner">Header</header>
+        <!-- Flexible elements need to be wrapped in a container -->
+        <div class="flex-container">
+            <nav role="navigation">Nav</nav>
+            <section>
+                <div class="flex-container row-1">
+                    <div class="level-1">content</div>
+                    <div class="level-1">content</div>
+                </div>
+                <div class="flex-container row-2">
+                    <div class="level-1">content</div>
+                    <div class="level-1">content</div>
+                    <div class="level-1">content</div>
+                </div>
+                <div class="flex-container row-3">
+                    <div class="level-1">content</div>
+                    <div class="level-1">content</div>
+                    <div class="level-1">content</div>
+                    <div class="level-1">content</div>
+                </div>
+                <div class="flex-container row-4">
+                    <div class="level-1 content-a">content</div>
+                    <div class="level-1 content-b">">content</div>
+                    <div class="level-1 content-c">content</div>
+                </div>
+              	<p>Content</p>
+            </section>
+        </div>
+        <footer role="contentinfo">Footer</footer>
+    </main>
+</body>
+</html>
