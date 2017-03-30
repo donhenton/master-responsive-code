@@ -25,7 +25,7 @@ var sassProcess =
         function () {
 
             return gulp.src('./src/sass/site-styles.scss')
-                    .pipe(sass().on('error', sass.logError))
+                    .pipe(sass({sourceComments: true, outputStyle: 'expanded',sourceMapEmbed:true,sourceMapContents: true}).on('error', sass.logError))
                     .pipe(concat('css/site-styles.css'))
                     //  .pipe(uglifycss())
                     .pipe(gulp.dest(targetLocation));

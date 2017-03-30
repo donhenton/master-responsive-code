@@ -80,8 +80,8 @@ body
 
         align-items: center;  
         justify-content: center;
-        
-        
+
+
 
 
     }
@@ -101,12 +101,13 @@ body
             width: 33%;
             margin : 1%;
             &:first-of-type { margin-left: 0; }
-        &:last-of-type { margin-right: 0; }
+            &:last-of-type { margin-right: 0; }
         }
         .center-item
         {
             border: thin solid $green_color;
             padding: 10px;
+            width: 85%;
 
 
 
