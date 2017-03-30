@@ -2,7 +2,10 @@
 @import "components/_typography.scss";
 @import "components/_grid.scss";
 @import "components/_flex-box-grid.scss";
- 
+@import "components/_modular.scss";
+@import "components/_buttons.scss";
+@import "components/_myMenu.scss";
+@import "components/_tables.scss";
 
 
 .grid
@@ -14,7 +17,7 @@
 
 .content
 {
-    
+
     background-color:  darkslategrey;
     height: 100px;
     padding-top: 45px;
@@ -63,4 +66,34 @@ body
 
     margin: 10px;
     color: aliceblue;
+}
+
+.three-column-demo
+{
+    .flex-container
+    {
+
+        align-items: center;  
+        justify-content: center;
+        
+    }
+    .box-item
+    {
+
+        display: flex;
+        align-items: center;  
+        justify-content: center;
+        border: thin solid blue;
+        min-height: 110px;
+        width: 200px;
+        .center-item
+        {
+            border: thin solid red;
+
+             
+
+        }
+
+    }
+
 }

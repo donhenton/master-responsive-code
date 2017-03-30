@@ -1,0 +1,66 @@
+.btn
+{
+
+    outline: none;
+    -webkit-border-radius: 12;
+    -moz-border-radius: 12;
+    border-radius: 12px;
+    
+    font-size: 15px;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+    border-style: none;
+    background-color: $white-color;
+    cursor: pointer;
+    color: white;
+    
+    &.btn-small
+    {
+        font-size: 12px;
+        padding: 2px 10px ;
+    }
+    
+    &.btn-large
+    {
+        font-size: 18px;
+    }
+
+    &.btn-primary
+    {
+        background-color: $blue-color;
+        
+
+
+        &:hover {
+           // background-color: #3e48d1;
+            background-color: #3e48d1;
+        }
+
+    }
+    
+    &.btn-inverse
+    {
+        background-color: $white-color;
+        color: $green-color;
+        border: solid $green-color 1px;
+
+
+        &:hover {
+            background-color: #e0cec0;
+            color: $white-color;
+        }
+    }
+
+    &.btn-red
+    {
+        background-color: $red-color;
+        
+
+
+        &:hover {
+            background-color: #d64120;
+            
+        }
+    }
+
+}

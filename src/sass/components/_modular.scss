@@ -1,0 +1,222 @@
+.pull-right
+{
+    float: right;
+}
+
+.pull-left
+{
+    float: left;
+}
+
+.clear {
+    clear: both; 
+}
+.bold {
+    font-weight: bold; 
+}
+.hidden,
+.hide {
+    display: none; 
+}
+.relative {
+    position: relative; 
+}
+.absolute {
+    position: absolute; 
+}
+.block {
+    display: block; 
+}
+.inline-block {
+    display: inline-block; 
+}
+.text-centered {
+    text-align: center; 
+}
+
+.space-left
+{
+    margin-left: 10px;
+    
+}
+
+.space-right
+{
+    margin-right: 10px;
+    
+}
+
+.columnLeft
+{
+    width: 50%;
+    float: left;
+    padding: 10px;
+}
+
+.columnRight
+{
+    width: 50%;
+    float: right;
+    padding: 10px;
+}
+
+.red-color
+{
+    background-color: $red-color;
+    color: $white-color;
+}
+
+
+.red-content
+{
+
+    color: $red-color;
+}
+
+.green-content
+{
+
+    color: $green-color;
+}
+
+.white-content
+{
+
+    color: white;
+}
+
+.blue-content
+{
+
+    color: $blue-color;
+}
+
+
+.green-color
+{
+    background-color: $green-color;
+    color: $white-color;
+}
+
+.reverse-red-color
+{
+    background-color: $white-color;
+    color: $red-color;
+}
+.reverse-green-color
+{
+    background-color: $white-color;
+    color: $green-color;
+}
+
+.row
+{
+    clear: both;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+}
+
+ul.basic-list
+{
+
+    list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><circle fill="#963019" cx="5" cy="5" r="4"/></svg>') ;
+    color: $blue-color;
+
+
+}
+
+em
+{
+    font-family: Orbitron, Arial, Sans-Serif ;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+b
+{
+    font-family: Roboto, Arial, Sans-Serif ;
+    font-size: 14px;
+    font-weight: 700;
+
+}
+
+.icon
+{
+
+    &.icon-large
+    {
+        font-size: 24px; 
+        position: relative;
+        top: 5px;
+    }
+    &.icon-small
+    {
+        font-size: 18px; 
+
+        position: relative;
+        top: 1px;
+    }
+}
+
+.well
+{
+    background-color: $white-color;
+    position: relative;
+    border: 3px solid white;
+    border-radius:  10px 10px;
+    padding: 15px;
+
+}
+
+.form
+{
+    input,select radio,fieldset
+    { 
+        display:inline-table;
+        margin: 5px;
+        padding: 5px;
+        &.btn
+        {
+            // padding: 10px;
+            padding: 0 16px;
+             vertical-align: center
+             
+        }
+    }
+    label
+    {
+        color: $green-color;
+    }
+    input[type=text], textarea,select,radio,radioGroup,input[type=submit] {
+        -webkit-transition: all 0.30s ease-in-out;
+        -moz-transition: all 0.30s ease-in-out;
+        -ms-transition: all 0.30s ease-in-out;
+        -o-transition: all 0.30s ease-in-out;
+        outline: none;
+        border: 1px solid $green-color;
+        height: 25px;
+ 
+    }
+
+    input[type=text]:focus, textarea:focus, select:focus,radio:focus,radioGroup:focus ,input[type=submit]:focus{
+        box-shadow: 0 0 5px $red-color;
+
+
+        border: 1px solid $red-color;
+    }
+
+    &.inline-form
+    {
+        fieldset
+        {
+            border: thin solid $green-color; 
+
+        }
+
+    }
+
+
+
+}

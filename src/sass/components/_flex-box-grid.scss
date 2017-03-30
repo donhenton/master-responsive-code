@@ -22,6 +22,7 @@
         margin-bottom: 0;
     }
     @include forLargeScreens(640) {
+        
         display: flex;
     } 
 

@@ -1,0 +1,77 @@
+.table 
+{
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+
+
+    caption
+    {
+        margin-bottom: 5px;
+
+    }
+
+    thead
+    {
+
+        display: table-header-group;
+        vertical-align: middle;
+        border-color: inherit;
+
+
+        tr
+        {
+            display: table-row;
+            vertical-align: inherit;
+            border-color: inherit;
+
+            th
+            {
+                vertical-align: bottom;
+                //border-bottom: 2px solid #ddd;
+                background-color: $green-color;
+                color: $white-color;
+                border: thin solid $green-color;
+            }
+        }
+    }
+
+    tbody
+    {
+
+        display: table-row-group;
+        vertical-align: middle;
+        border-color: inherit;
+
+
+
+
+        th
+        {
+            padding: 8px;
+            line-height: 1.42857143;
+            vertical-align: top;
+            border: 1px solid $green-color;
+        }
+
+        td
+        {
+            padding: 8px;
+            line-height: 1.42857143;
+            vertical-align: top;
+            border: 1px solid $green-color;
+
+        }
+
+
+    }
+    &.table-striped
+    {
+        tbody { 
+            tr:nth-of-type(odd) 
+                {
+                background-color: $white-color;
+            }
+        }
+    }
+}
