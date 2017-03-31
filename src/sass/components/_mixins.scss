@@ -1,5 +1,7 @@
 //Moble-first Media Queries Mixin
 @mixin forLargeScreens($width) {
-	@media (min-width: $width/16+em) { @content }
+    @media (min-width: $width/16+em) { @content }
 }
- 
+@mixin animation-nav-icon ( $direction: left, $duration: .2s) {
+    transition: $direction $duration;
+}

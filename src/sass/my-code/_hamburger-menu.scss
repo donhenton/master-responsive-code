@@ -1,1 +1,107 @@
+.menu {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -100;
+    list-style: none;
+    @include forLargeScreens(640) {
 
+        max-width: 980px;
+        min-height: 50%;
+        margin: 10px auto 0;
+        position: relative;
+        text-align: center;
+        border: #999 1px dotted;
+    }
+    //List items
+    li {
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px dotted #999;
+        @include forLargeScreens(640) {
+            display: inline;
+            border: none;
+        }
+        //Links themselves
+        a {
+            display: block;
+            padding: 1em 1em 1em 2em;
+            color: #2963BD;
+            text-decoration: none;
+            @include forLargeScreens(640) {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+
+.main-container {
+    @include animation-nav-icon;
+    background-color: lightgrey;
+    color: $blue_color;
+    z-index:1;
+    left: 0px;
+    position:relative;
+    padding-top: 75px;
+    box-shadow: 0 0 5px 1px rgba(black, .15);
+    @include forLargeScreens(640) {
+        max-width: 980px;
+        min-height: 50%;
+        margin: 0 auto 0;
+        position: relative;
+        text-align: center;
+        left: 0px;
+        padding-top: 5px;
+
+    }
+}
+
+
+.label-trigger {
+    
+    @include forLargeScreens(640) {
+        display: none;
+
+    }
+    
+    
+    
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    z-index: 2;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    background: #fff;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    //Hamburger icon 
+    &:before {
+        display: block;
+        padding-top: 25px;
+        text-align: center;
+        content: '≡';
+        font-size: 3em;
+        line-height: 0;
+    }
+    //Active hamburger icon
+    &.active {
+        background: #333;
+        color: #fff;
+    }
+    //Hide the term 'Menu' from displaying without sacrificing accessibility
+    span {
+        display: inline-block;
+        text-indent: -100%;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
