@@ -1,0 +1,155 @@
+.hamburger-menu-left 
+{
+    color: black;
+    margin: 0;
+    nav
+    {
+        background-color: white;
+        height: auto;
+        padding-top: 0px;
+    }
+
+
+    //Mobile-first Media Query Mixin
+    @mixin goingLarge($media) {
+        @media (min-width: $media/16+em) { @content; }
+    }
+    //Mixin for animating the hamburger icon
+    @mixin animation-nav-icon ( $direction: left, $duration: .2s) {
+        transition: $direction $duration;
+    }
+    //Menu itself
+    .menu {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 0;
+        list-style: none;
+        @include goingLarge(640) {
+            max-width: 980px;
+            min-height: 50%;
+            margin: 10px auto 0;
+            position: relative;
+            text-align: center;
+            border: #999 1px dotted;
+        }
+        //List items
+        li {
+            width: 100%;
+            text-align: left;
+            border-bottom: 1px dotted #999;
+            @include goingLarge(640) {
+                display: inline;
+                border: none;
+            }
+            //Links themselves
+            a {
+                display: block;
+                padding: 1em 1em 1em 2em;
+                color: #2963BD;
+                text-decoration: none;
+                @include goingLarge(640) {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    //Main Container
+    .main-container {
+        max-width: 980px;
+        height: 300px;
+        margin: auto;
+        padding: 20px 0 20px 80px;
+        position: relative;
+        top: 0;
+        bottom: 100%;
+        left: 0;
+        z-index: 1;
+        background: #eee;
+        @include goingLarge(640) {
+            padding: 20px;
+        }
+    }
+    //Navigation Trigger - Hide the checkbox
+    .nav-trigger {
+        position: absolute;
+        clip: rect(0, 0, 0, 0);
+    }
+    //Label that triggers the checkbox
+    .label-trigger {
+        position: fixed;
+        left: 10px;
+        top: 10px;
+        z-index: 2;
+        height: 50px;
+        width: 50px;
+        cursor: pointer;
+        background: #fff;
+        border-radius: 2px;
+        border: 1px solid #ccc;
+        //Hamburger icon 
+        &:before {
+            display: block;
+            padding-top: 25px;
+            text-align: center;
+            content: '≡';
+            font-size: 3em;
+            line-height: 0;
+        }
+        //Active hamburger icon
+        &.active {
+            background: #333;
+            color: #fff;
+        }
+        //Hide the term 'Menu' from displaying without sacrificing accessibility
+        span {
+            display: inline-block;
+            text-indent: -100%;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    }
+    //Animate the menu
+    .nav-trigger {
+        & + label {
+            @include animation-nav-icon;
+            //Hide the checkbox and label in large screens
+            @include goingLarge(640) {
+                display: none;
+            }
+        }
+        //Animate the label when checkbox is checked
+        &:checked + label {
+            left:  215px;
+        }
+        //Animate the main container when checkbox is checked
+
+         
+        &:checked ~ .main-container {
+            left: 200px;
+            
+            box-shadow: 0 0 5px 1px rgba(black, .15);
+            @include goingLarge(640) {
+                left:0px;
+            }
+        }
+    }
+    //Animate the main container
+    .main-container {
+        @include animation-nav-icon;
+         
+        color: $blue_color;
+    }
+    //Avoid horizontal scrollbars due to repositioning of elements
+    body, html { overflow-x: hidden; }
+
+
+
+
+}
