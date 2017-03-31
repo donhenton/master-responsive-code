@@ -36,7 +36,19 @@ $(window).resize(function () {
     if (w > 640)
     {
         $(".label-trigger").removeClass('active');
-        $('#nav-trigger').attr('checked', false);
+        $('.main-container').animate({
+           
+            left: '0px'
+        }, 1, function () {
+            // Animation complete.
+        });
+        $(".label-trigger").animate({
+           
+            left: '10px'
+        }, 1, function () {
+            // Animation complete.
+        });
     }
+    
 
 });
