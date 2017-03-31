@@ -22,9 +22,9 @@ var targetLocation = 'public_html/build/';
 var SASS_FILES = './src/sass/**/*.scss';
 
 var sassProcess =
-        function () {
+        function (sassSrc) {
 
-            return gulp.src('./src/sass/site-styles.scss')
+            return gulp.src(sassSrc)
                     .pipe(sass({sourceComments: true, outputStyle: 'expanded',sourceMapEmbed:true,sourceMapContents: true}).on('error', sass.logError))
                     .pipe(concat('css/site-styles.css'))
                     //  .pipe(uglifycss())
@@ -32,9 +32,15 @@ var sassProcess =
         };
 
 gulp.task('sass', function () {
-    sassProcess();
+    sassProcess('./src/sass/site-styles.scss');
 
 });
+
+gulp.task('sass-my-code', function () {
+    sassProcess('./src/sass/my-code.scss');
+
+});
+
 gulp.task('clean', function (  ) {
 
     del([targetLocation]);
@@ -45,7 +51,7 @@ gulp.task('watch', function () {
 
     watch(SASS_FILES, function (events, done) {
 
-        sassProcess()
+        sassProcess('./src/sass/site-styles.scss')
                 .on('finish', function ( ) {
                     gutil.log("processing change in css");
                     livereload.reload(pageURL);
@@ -56,6 +62,36 @@ gulp.task('watch', function () {
     
 
 });
+
+gulp.task('watch-mycode', function () {
+
+    watch(SASS_FILES, function (events, done) {
+
+        sassProcess('./src/sass/my-code.scss')
+                .on('finish', function ( ) {
+                    gutil.log("processing change in css");
+                    livereload.reload(pageURL);
+                });
+
+    });
+
+     watch('./src/js/**/*', function (events, done) {
+
+        gulp.start('copy-assets');
+    });
+
+});
+
+gulp.task('copy-assets', function () {
+    
+      gulp.src(['./src/js/**/*'] )
+              .pipe(gulp.dest(targetLocation+'/js'));
+ 
+    
+    
+});
+
+
 
 gulp.task('serve', function (done) {
     livereload.listen();
@@ -73,3 +109,4 @@ gulp.task('serve', function (done) {
 });
 
 gulp.task('default', gulpsync.sync(['clean',   'sass',   'watch', 'serve' ]));
+gulp.task('mycode', gulpsync.sync(['clean',   'sass-my-code', 'copy-assets', 'watch-mycode', 'serve' ]));
