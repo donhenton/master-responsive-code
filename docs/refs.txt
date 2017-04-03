@@ -1,1 +1,5 @@
 https://demo.agektmr.com/flexbox/
+
+zoom level
+
+http://stackoverflow.com/questions/9798331/zoom-a-browser-window-view-with-javascript
