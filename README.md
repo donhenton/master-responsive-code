@@ -9,3 +9,8 @@ Code Exploration for [Mastering Responsive Code](https://www.packtpub.com/web-de
 
 ## Demonstration
 * https://donhenton.github.io/master-responsive-code/public_html/
+
+
+## Responsive demo
+* use gulp mycode to run the github demo locally
+

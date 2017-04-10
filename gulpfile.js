@@ -17,7 +17,7 @@ var server = require('gulp-server-livereload');
 
 var livereload = require('gulp-livereload');
 
-var pageURL = 'http://localhost:8080';
+var pageURL = 'http://127.0.0.1:8080';
 var targetLocation = 'public_html/build/';
 var SASS_FILES = './src/sass/**/*.scss';
 

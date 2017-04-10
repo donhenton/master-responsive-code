@@ -1,14 +1,18 @@
 @import "components/_reset.scss";
 @import "components/_mixins.scss";
 @import "components/_typography.scss";
-@import "components/_modular.scss";
-@import "components/_buttons.scss";
-@import "components/_myMenu.scss";
-@import "components/_tables.scss";
+
+body,html
+{
+    height: 100%;
+    
+    
+    
+}
 
 
 @import "my-code/_hamburger-menu.scss";
 
-
+ 
  
  
