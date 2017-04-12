@@ -1,7 +1,7 @@
 @import "components/_reset.scss";
 @import "components/_mixins.scss";
 @import "components/_typography.scss";
-@import "future/_future_grid.scss";
+
 
 body,html {height: 100%; 
            background-color: #131d39;
@@ -27,50 +27,48 @@ body,html {height: 100%;
 
    //padding: 0 0;
     width: 100%;
+     
+    color: white;
+ 
+   
+    margin: auto;
+    text-align: center;
     height: 100%;
-   // margin: 0 auto;
-    text-align: left;
+
     .flex-container
     {
+          
+    @include forLargeScreens(640) {
+        
+        display: flex;
+    } 
 
         align-items: center;  
         justify-content: center;
         background-color: transparent;
-        border: thin solid yellow;
-        //max-height: 79.9%
+         
     }
     .box-item
     {
 
         display: flex;
         align-items: center;  
-        border: thin solid white;
         width:100%;
         height: 100%;
         justify-content: center;
         color: black;
         background: transparent;
         text-align: center;
-        img
-        {
-            border: thin solid red;
-        }
-
-        
+                
         @include forLargeScreens(640) {
 
             width: 50%;
-           // margin : 1%;
-           // &:first-of-type { margin-left: 0; }
-           // &:last-of-type { margin-right: 0; }
+
         }
         .center-item
         {
 
-           // padding: 10px;
             width: 85%;
-
-
 
         }
 
@@ -98,21 +96,19 @@ footer
     }
 
 }
-/*.content
-{
 
-    background-color:  darkslategrey;
-    height: 80%;
-    padding-top: 45px;
-}*/
 
 header,footer
 {
     height: 10%;
-    // background: #131d39;
     background: $green-color;
     text-align:center;
-    padding-top: 4%;
+    padding-top: 2%;
+    @include forLargeScreens(800) {
+
+            padding-top: 1%;
+
+        }
     font-size: 20px;
 
 
