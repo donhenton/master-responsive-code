@@ -12,7 +12,7 @@ body,html {height: 100%;
 
     background-size: cover;
     background-repeat: no-repeat;
-    background: url('../../rep-images/bonestell.png') no-repeat center center ; 
+    background: url('../../rep-images/bonestell.png') no-repeat center center fixed ; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -69,7 +69,12 @@ body,html {height: 100%;
         {
 
             width: 85%;
-
+            .image-title
+            {
+                font-size: 35px;
+                color: #eee;
+                margin-top: 10px;
+            }
         }
 
     }
