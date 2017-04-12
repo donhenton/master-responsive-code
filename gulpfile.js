@@ -41,6 +41,11 @@ gulp.task('sass-my-code', function () {
 
 });
 
+gulp.task('sass-future', function () {
+    sassProcess('./src/sass/future.scss');
+
+});
+
 gulp.task('clean', function (  ) {
 
     del([targetLocation]);
@@ -68,6 +73,25 @@ gulp.task('watch-mycode', function () {
     watch(SASS_FILES, function (events, done) {
 
         sassProcess('./src/sass/my-code.scss')
+                .on('finish', function ( ) {
+                    gutil.log("processing change in css");
+                    livereload.reload(pageURL);
+                });
+
+    });
+
+     watch('./src/js/**/*', function (events, done) {
+
+        gulp.start('copy-assets');
+    });
+
+});
+
+gulp.task('watch-future', function () {
+
+    watch(SASS_FILES, function (events, done) {
+
+        sassProcess('./src/sass/future.scss')
                 .on('finish', function ( ) {
                     gutil.log("processing change in css");
                     livereload.reload(pageURL);
@@ -110,3 +134,4 @@ gulp.task('serve', function (done) {
 
 gulp.task('default', gulpsync.sync(['clean',   'sass',   'watch', 'serve' ]));
 gulp.task('mycode', gulpsync.sync(['clean',   'sass-my-code', 'copy-assets', 'watch-mycode', 'serve' ]));
+gulp.task('future', gulpsync.sync(['clean',   'sass-future', 'copy-assets', 'watch-future', 'serve' ]));

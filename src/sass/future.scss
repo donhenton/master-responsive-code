@@ -1,0 +1,122 @@
+@import "components/_reset.scss";
+@import "components/_mixins.scss";
+@import "components/_typography.scss";
+@import "future/_future_grid.scss";
+
+body,html {height: 100%; 
+           background-color: #131d39;
+}
+.bkg-img
+{
+    // background: url('../../rep-images/HeroBackground.png');
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background: url('../../rep-images/bonestell.png') no-repeat center center ; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+
+}
+
+
+.main-container.future
+{
+
+   //padding: 0 0;
+    width: 100%;
+    height: 100%;
+   // margin: 0 auto;
+    text-align: left;
+    .flex-container
+    {
+
+        align-items: center;  
+        justify-content: center;
+        background-color: transparent;
+        border: thin solid yellow;
+        //max-height: 79.9%
+    }
+    .box-item
+    {
+
+        display: flex;
+        align-items: center;  
+        border: thin solid white;
+        width:100%;
+        height: 100%;
+        justify-content: center;
+        color: black;
+        background: transparent;
+        text-align: center;
+        img
+        {
+            border: thin solid red;
+        }
+
+        
+        @include forLargeScreens(640) {
+
+            width: 50%;
+           // margin : 1%;
+           // &:first-of-type { margin-left: 0; }
+           // &:last-of-type { margin-right: 0; }
+        }
+        .center-item
+        {
+
+           // padding: 10px;
+            width: 85%;
+
+
+
+        }
+
+    }
+
+}
+header 
+{
+
+
+    border-bottom: 1px solid #ccc;
+}
+footer
+{
+
+
+    border-top: 1px solid #ccc;
+
+
+
+    .footer-main
+    {
+
+        color: white;
+    }
+
+}
+/*.content
+{
+
+    background-color:  darkslategrey;
+    height: 80%;
+    padding-top: 45px;
+}*/
+
+header,footer
+{
+    height: 10%;
+    // background: #131d39;
+    background: $green-color;
+    text-align:center;
+    padding-top: 4%;
+    font-size: 20px;
+
+
+}
+
+
+

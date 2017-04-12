@@ -1,0 +1,28 @@
+
+//Main container
+.main-container {
+    width: 100%;
+    height: auto;
+    
+    //Change this value to ANYTHING you want,
+    //     no need to edit anything else
+   // max-width: 1200px;
+    color: white;
+    //Any value you want
+   // padding: 0 1.67%;
+    margin: auto;
+    text-align: center;
+}
+//Flexbox container
+.flex-container {
+  //  margin-bottom: 10px;
+    background-color: slategray;
+    //Remove the margin from the last flexbox container
+     
+    @include forLargeScreens(640) {
+        
+        display: flex;
+    } 
+
+ 
+}
