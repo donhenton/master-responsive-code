@@ -1,6 +1,7 @@
 $comic-book-blue: #86aede;
 $comic-off-white: rgb(242,246,251);
 $orange-highlight: rgb(245,175,102);
+$comic-dark-blue: rgb(70,116,172);
 
 .body-container
 {
@@ -10,14 +11,14 @@ $orange-highlight: rgb(245,175,102);
 
     nav
     { 
-         
+
         display: inline;
-        
-         @include forLargeScreens(640) {
-             
-             
-         }
-        
+
+        @include forLargeScreens(640) {
+
+
+        }
+
         .menu {
 
             margin: 0;
@@ -29,25 +30,28 @@ $orange-highlight: rgb(245,175,102);
             bottom: 0;
             left: 0; 
             z-index: -100;
-            
+
             list-style: none;
             @include forLargeScreens(640) {
 
 
-               // height: 20%;
+                // height: 20%;
                 z-index:  100;
                 display: inline;
                 border: none;
                 background-color:   $comic-book-blue ;
                 position: inherit;
-                 
+
 
             }
             //List items
             li {
-                //width: 100%;
+                 width: 210px;
                 text-align: left;
-                border-bottom: 1px solid #999;
+                background-color: $comic-book-blue;
+                border-bottom: 1px solid $comic-off-white;
+                
+                
                 @include forLargeScreens(640) {
                     display: inline;
                     border: none;
@@ -56,10 +60,23 @@ $orange-highlight: rgb(245,175,102);
                 a {
                     display: block;
                     padding: 1em 1em 1em 2em;
-                    color: #2963BD;
+                    color: $comic-off-white;
                     text-decoration: none;
+                    &:hover
+                        {
+
+                            background-color: $orange-highlight;
+
+                        }
                     @include forLargeScreens(640) {
                         display: inline-block;
+
+                        padding:  2rem 3rem;
+                        background-color:$comic-book-blue; 
+                        color:  $comic-off-white   ;    
+                        height: 100%;
+                        
+
                     }
                 }
             }
@@ -69,7 +86,7 @@ $orange-highlight: rgb(245,175,102);
     .main-container {
         // @include animation-nav-icon;
 
-         border-left: thin solid black;
+        border-left: thin solid $comic-dark-blue;
 
         height: 100%;
 
@@ -79,8 +96,8 @@ $orange-highlight: rgb(245,175,102);
 
         @include forLargeScreens(640) {
             height: 92.8%;
-             border-left: none;
-
+            border-left: none;
+            z-index:5;
         }
 
         /*
@@ -143,12 +160,12 @@ $orange-highlight: rgb(245,175,102);
         header 
         {
             height: 10%;
-            
+
             .header-title
             {
                 float: right;
                 margin-right: 2rem;
-                //margin-top: 1rem;
+                margin-top: 1rem;
                 font-size: 3.4rem;
             }
         }
@@ -158,9 +175,9 @@ $orange-highlight: rgb(245,175,102);
             height: 85.5%;
             background-color: white;
             font-size: 1.4rem;
-           
-           // background-size: cover;
-           // background-repeat: no-repeat;
+
+            // background-size: cover;
+            // background-repeat: no-repeat;
             background: url('../../../my-images/bpencil.png') no-repeat center center fixed ; 
             -webkit-background-size: cover;
             -moz-background-size: cover;
@@ -169,7 +186,7 @@ $orange-highlight: rgb(245,175,102);
             background-color: white;
 
             @include forLargeScreens(640) {
-                
+                height: 93%;
             }
 
 
