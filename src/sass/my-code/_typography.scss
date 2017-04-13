@@ -15,6 +15,12 @@ body,html
     height: 100%;
     font-size: 62.5%;
     font-weight: 400;
+    
+    
+    @include forLargeScreens(640) {
+           font-size: 75%;
+}
+    
 
 }
 
@@ -23,7 +29,31 @@ $modularscale: (
 base: 16px 1280px,
 ratio: 1.618
 );
+
+h1
+{
+    font-size: ms(4);
+}
+
+
 h2
+{
+    font-size: ms(3);
+}
+h3
 {
     font-size: ms(2);
 }
+
+p
+{
+    margin: 1.25rem 0rem;
+    
+}
+
+blockquote
+{
+    margin-left: 2rem;
+    
+}
+

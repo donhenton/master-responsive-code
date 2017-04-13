@@ -175,6 +175,7 @@ $comic-dark-blue: rgb(70,116,172);
             height: 85.5%;
             background-color: white;
             font-size: 1.4rem;
+            padding: 2rem;
 
             // background-size: cover;
             // background-repeat: no-repeat;
@@ -182,13 +183,14 @@ $comic-dark-blue: rgb(70,116,172);
             //-webkit-background-size: cover;
            // -moz-background-size: cover;
             //-o-background-size: cover;
+            
             background-size: cover;
             background-color: white;
 
             @include forLargeScreens(640) {
                 height: 93%;
                
-                  background-position-y: -550px;
+                 // 
             }
 
 

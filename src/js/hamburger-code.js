@@ -50,6 +50,7 @@ $(window).resize(function () {
             // Animation complete.
         });
 
+        //linear best fit from several widths to position thor at the center
         var ex = "-"+(480 + (w-640))+"px";
         //background image handling
         
