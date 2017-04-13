@@ -178,15 +178,17 @@ $comic-dark-blue: rgb(70,116,172);
 
             // background-size: cover;
             // background-repeat: no-repeat;
-            background: url('../../../my-images/bpencil.png') no-repeat center center fixed ; 
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
+            background: url('../../../my-images/bpencil.png')   center center   ; 
+            //-webkit-background-size: cover;
+           // -moz-background-size: cover;
+            //-o-background-size: cover;
             background-size: cover;
             background-color: white;
 
             @include forLargeScreens(640) {
                 height: 93%;
+               
+                  background-position-y: -550px;
             }
 
 

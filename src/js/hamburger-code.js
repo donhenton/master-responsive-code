@@ -12,43 +12,52 @@ $(function () {
             trMenu = "10px";
             trBlock = '0px';
         }
-        
+
         $(this).toggleClass("active");
         $(this).animate({
-           
+
             left: trMenu
         }, 200, function () {
             // Animation complete.
         });
-        
+
         $('.main-container').animate({
-           
+
             left: trBlock
         }, 200, function () {
             // Animation complete.
         });
-        
+
     });
 });
 $(window).resize(function () {
     //console.log($(window).width());
     var w = $(window).width();
+    var mainContainer = $('.main-content');
     if (w > 640)
     {
         $(".label-trigger").removeClass('active');
         $('.main-container').animate({
-           
+
             left: '0px'
         }, 1, function () {
             // Animation complete.
         });
         $(".label-trigger").animate({
-           
+
             left: '10px'
         }, 1, function () {
             // Animation complete.
         });
-    }
-    
 
+        var ex = "-"+(480 + (w-640))+"px";
+        //background image handling
+        
+        mainContainer.attr( 'style','background-position-y: '+ ex );
+    }
+    else
+    {
+        mainContainer.removeAttr('style');
+    }
+        
 });

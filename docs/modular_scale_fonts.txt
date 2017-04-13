@@ -1,0 +1,11 @@
+http://www.modularscale.com/?16,1280,16.842374276836924&px&1.618
+
+
+
+$modularscale: (
+  base: 16px 1280px,
+  ratio: 1.618
+);
+
+the source for the stuff in the file
+https://github.com/modularscale/modularscale-sass/releases/tag/v3.0.2

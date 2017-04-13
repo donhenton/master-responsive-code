@@ -1,21 +1,10 @@
 @import "components/_reset.scss";
 @import "components/_mixins.scss";
-@import "components/_typography.scss";
-//@import "components/_modular.scss";
-@import "components/_buttons.scss";
-//@import "components/_myMenu.scss";
-//@import "components/_tables.scss";
-
-
+@import "my-code/_modularscale.scss"; //this is derived from github http://www.modularscale.com/?16,1280,16.842374276836924&px&1.618
+@import "my-code/_typography.scss";
 @import "my-code/_hamburger-menu.scss";
 
 
- 
- body,html
- {
-     height: 100%;
-     font-size: 62.5%;
- }
- 
+  
  
  
