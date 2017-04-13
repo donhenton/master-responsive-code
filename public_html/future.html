@@ -1,0 +1,52 @@
+<!--
+Chapter 4: CSS Grids, Frameworks, UI Kits and Flexbox
+20 - HTML for the Build a Sample Page with Flexbox section
+-->
+
+<!DOCTYPE html>
+<!--[if IE 8]> <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Futures Past</title>
+        <link href="build/css/site-styles.css" rel="stylesheet" type="text/css"/>
+        <!--[if lt IE 9]>
+         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <!--[if !IE]><!-->
+        <script>
+            if (/*@cc_on!@*/false && document.documentMode === 10) {
+                document.documentElement.className += ' ie10';
+            }
+        </script>
+        <!--<![endif]-->
+    </head>
+    <body>
+         
+        <main class="main-container future" role="main">
+            <header role="banner">Header</header>
+
+            <!-- Flexible elements need to be wrapped in a container -->
+            <div class="flex-container   bkg-img">
+                <div class="box-item">
+                    <div class="center-item"> 
+                        <div class="image-title">Ambrosis Combine</div>
+                        <img src="rep-images/left1.png" alt=""/>
+                    </div>
+                </div>
+                
+                <div class="box-item">
+                    <div class="center-item"> 
+                        <div class="image-title">Grok Ships</div>
+                        <img src="rep-images/right1.png" alt=""/>
+                    </div>
+                </div>
+                
+            </div>
+            <footer><span class="footer-main">Footer</span></footer>
+        </main>
+    </body>
+</html>
