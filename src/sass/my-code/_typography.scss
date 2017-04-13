@@ -14,19 +14,23 @@ body,html
     font-family: graphicmedium, Arial, Sans-Serif ;  
     height: 100%;
     font-size: 62.5%;
-    
-    
-    
+
+
+
     @include forLargeScreens(640) {
-           font-size: 75%;
-}
-    
+        font-size: 75%;
+    }
+
 
 }
 
+/*$modularscale: (
+base: 16px 1280px,
+ratio: 1.618
+);*/
 
 $modularscale: (
-base: 16px 1280px,
+base: 16px 1024px,
 ratio: 1.618
 );
 
@@ -48,12 +52,13 @@ h3
 p
 {
     margin: 1.25rem 0rem;
-    
+
+
 }
 
 blockquote
 {
     margin-left: 2rem;
-    
+
 }
 

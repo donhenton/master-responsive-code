@@ -54,7 +54,7 @@ $(window).resize(function () {
         var ex = "-"+(480 + (w-640))+"px";
         //background image handling
         
-        mainContainer.attr( 'style','background-position-y: '+ ex );
+      //  mainContainer.attr( 'style','background-position-y: '+ ex );
     }
     else
     {

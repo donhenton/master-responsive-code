@@ -186,6 +186,7 @@ $comic-dark-blue: rgb(70,116,172);
             
             background-size: cover;
             background-color: white;
+            overflow:auto;
 
             @include forLargeScreens(640) {
                 height: 93%;
