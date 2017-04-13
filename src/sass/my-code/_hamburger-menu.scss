@@ -4,144 +4,153 @@
     height:100%;
     overflow-x: hidden;
 
+    nav
+    { 
+         
+        .menu {
 
-
-    .menu {
-
-        margin: 0;
-        padding: 0;
-        position: fixed;
-
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: -100;
-        list-style: none;
-        @include forLargeScreens(640) {
-
-
-            height: 20%;
-            border: none;
-            // margin: 10px auto 0;
-            position: relative;
-            text-align: center;
-
-        }
-        //List items
-        li {
-            //width: 100%;
-            text-align: left;
-            border-bottom: 1px solid #999;
+            margin: 0;
+            padding: 0;
+            position: fixed;
+            font-size: 1.4rem;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -100;
+            list-style: none;
             @include forLargeScreens(640) {
-                display: inline;
+
+
+                height: 20%;
                 border: none;
+                // margin: 10px auto 0;
+                position: relative;
+                text-align: center;
+
             }
-            //Links themselves
-            a {
-                display: block;
-                padding: 1em 1em 1em 2em;
-                color: #2963BD;
-                text-decoration: none;
+            //List items
+            li {
+                //width: 100%;
+                text-align: left;
+                border-bottom: 1px solid #999;
                 @include forLargeScreens(640) {
-                    display: inline-block;
+                    display: inline;
+                    border: none;
+                }
+                //Links themselves
+                a {
+                    display: block;
+                    padding: 1em 1em 1em 2em;
+                    color: #2963BD;
+                    text-decoration: none;
+                    @include forLargeScreens(640) {
+                        display: inline-block;
+                    }
                 }
             }
         }
     }
-
 
     .main-container {
         // @include animation-nav-icon;
         background-color: lightgrey;
         border: thin solid black;
-        color: $blue_color;
-        height: 95%;
+
+        height: 100%;
+
         z-index:1;
         left: 0px;
         position:relative;
-        padding-top: 18%;
 
-        //box-shadow: 0 0 5px 1px rgba(black, .15);
         @include forLargeScreens(640) {
+            height: 92.8%;
 
-            margin: 0 auto 0;
-            position: relative;
-            text-align: center;
-            left: 0px;
-            height: 80%;
-            padding-top: 5px;
 
         }
 
-
-        .flex-container
-        {
-
-            align-items: center;  
-            justify-content: center;
-
-            display: flex;
-            height: 100%;
-            flex-direction: column;
-            @include forLargeScreens(640) {
-
-                flex-direction: row;
-            }
-            .box-item
-            {
-
-                display: flex;
-                align-items: center;  
-                justify-content: center;
-                color: black;
-                background-color:  bisque;
-                margin-top: 1%;
-                height: 50%;
-                width:100%;
-
-
-                @include forLargeScreens(640) {
-
-                    width: 32.5%;
-                    margin : 1%;
-                    &:first-of-type { margin-left: 0; }
-                    &:last-of-type { margin-right: 0; }
-                }
-                .center-item
+        /*
+                .flex-container
                 {
-                    border: thin solid $green_color;
-                    padding: 10px;
-                    width: 95%;
-
-
-
+                    border: thin solid yellow;
+                    align-items: center;  
+                    justify-content: center;
+        
+                    display: flex;
+                    height: 100%;
+                    flex-direction: column;
+                    @include forLargeScreens(640) {
+        
+                        flex-direction: row;
+                    }
+                    .box-item
+                    {
+        
+                        display: flex;
+                        align-items: center;  
+                        justify-content: center;
+                        color: black;
+                        background-color:  bisque;
+                        margin-top: 1%;
+                        height: 50%;
+                        width:100%;
+        
+        
+                        @include forLargeScreens(640) {
+        
+                            width: 32.5%;
+                            margin : 1%;
+                            &:first-of-type { margin-left: 0; }
+                            &:last-of-type { margin-right: 0; }
+                        }
+                        .center-item
+                        {
+                            border: thin solid $green_color;
+                            padding: 10px;
+                            width: 95%;
+        
+        
+        
+                        }
+        
+                    }
                 }
+        */
 
+        header 
+        {
+            height: 10%;
+            .header-title
+            {
+               float: right;
+               margin-right: 20px;
+               margin-top: 10px;
+               font-size: 34px;
             }
         }
 
-
-
-
-    }
-    footer
-    {
-        text-align: center;
-        height: 5%;
-        padding-top: 2.5%;
-
-        .footer-main-text
+        .main-content
         {
-            font-weight: bolder;
-        }
-        .footer-copyright
-        {
-            float: right;
-            margin-right: 10px;
+            height: 85%;
+            background-color: white;
+
         }
 
 
+        footer
+        {
+
+            height: 5%;
+
+            .item-banner
+            {
+                padding-top: 0.5%;
+
+            }
+
+
+
+        }
     }
     .label-trigger {
 
