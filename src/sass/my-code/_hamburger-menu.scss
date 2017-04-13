@@ -1,12 +1,16 @@
+$comic-book-blue: #86aede;
+$comic-off-white: rgb(242,246,251);
+$orange-highlight: rgb(245,175,102);
+
 .body-container
 {
     width: 100%;
     height:100%;
-    overflow-x: hidden;
+    overflow: hidden;
 
     nav
     { 
-         
+
         .menu {
 
             margin: 0;
@@ -24,9 +28,9 @@
 
                 height: 20%;
                 border: none;
-                // margin: 10px auto 0;
+                background-color:   $comic-book-blue ;
                 position: relative;
-                text-align: center;
+               // text-align: center;
 
             }
             //List items
@@ -54,18 +58,18 @@
 
     .main-container {
         // @include animation-nav-icon;
-        background-color: lightgrey;
-        border: thin solid black;
+
+         border-left: thin solid black;
 
         height: 100%;
 
-        z-index:1;
+        z-index:5;
         left: 0px;
         position:relative;
 
         @include forLargeScreens(640) {
             height: 92.8%;
-
+             border-left: none;
 
         }
 
@@ -117,22 +121,47 @@
                 }
         */
 
+        header,footer
+        {
+
+            z-index: 10;
+            background-color: $comic-book-blue;
+            color: $comic-off-white;
+        }
+
+
         header 
         {
             height: 10%;
+            
             .header-title
             {
-               float: right;
-               margin-right: 20px;
-               margin-top: 10px;
-               font-size: 34px;
+                float: right;
+                margin-right: 2rem;
+                margin-top: 1rem;
+                font-size: 3.4rem;
             }
         }
 
         .main-content
         {
-            height: 85%;
+            height: 85.5%;
             background-color: white;
+            font-size: 1.4rem;
+           
+           // background-size: cover;
+           // background-repeat: no-repeat;
+            background: url('../../../my-images/bpencil.png') no-repeat center center fixed ; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background-color: white;
+
+            @include forLargeScreens(640) {
+                
+            }
+
 
         }
 
@@ -141,10 +170,11 @@
         {
 
             height: 5%;
-
+            font-size: 1.2rem;
+            text-align: center;
             .item-banner
             {
-                padding-top: 0.5%;
+                padding-top: 1rem;
 
             }
 
@@ -162,27 +192,27 @@
 
 
         position: fixed;
-        left: 10px;
-        top: 10px;
-        z-index: 2;
-        height: 50px;
-        width: 50px;
+        left: 1rem;
+        top: 0.5rem;
+        z-index: 20;
+        height: 5rem;
+        width: 5rem;
         cursor: pointer;
-        background: #fff;
-        border-radius: 2px;
-        border: 1px solid #ccc;
+        background: $comic-off-white;
+        //border-radius: 2px;
+        //border: 1px solid #ccc;
         //Hamburger icon 
         &:before {
             display: block;
-            padding-top: 25px;
+            padding-top: 2.5rem;
             text-align: center;
             content: '≡';
-            font-size: 3em;
+            font-size: 3rem;
             line-height: 0;
         }
         //Active hamburger icon
         &.active {
-            background: #333;
+            background: $orange-highlight;
             color: #fff;
         }
         //Hide the term 'Menu' from displaying without sacrificing accessibility
