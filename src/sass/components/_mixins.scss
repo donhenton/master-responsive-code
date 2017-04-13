@@ -10,3 +10,24 @@
     font-size: ($sizeValue * 10) + px;
     font-size: $sizeValue + rem;
 }
+
+@mixin fontFace($font-family, $file-path) {
+    @font-face {
+        font: {
+            family: $font-family;
+            weight: normal;
+            style: normal;
+        }
+        //IE9 Compat Modes
+        src: url('#{$file-path}.eot');
+        //IE6-IE8
+        src: url('#{$file-path}.eot?#iefix')
+            format('embedded-opentype'),
+            //Modern Browsers
+            url('#{$file-path}.woff') format('woff'),
+            //Safari, Android, iOS
+            url('#{$file-path}.ttf') format('truetype'),
+            //Safari, Android, iOS
+            url('#{$file-path}.svg') format('svg');
+    }
+}  

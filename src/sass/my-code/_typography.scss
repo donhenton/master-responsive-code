@@ -4,17 +4,17 @@ http://www.modularscale.com/?16,1280,16.842374276836924&px&1.618
 The modular scale code 
 
 */
-@import url(https://fonts.googleapis.com/css?family=Palanquin:400,700); /* font-family 'Palanquin' sans serif */
-@import url(https://fonts.googleapis.com/css?family=Orbitron:400,700|Roboto:400,700italic,700);
+//@import url(https://fonts.googleapis.com/css?family=Palanquin:400,700); /* font-family 'Palanquin' sans serif */
+//@import url(https://fonts.googleapis.com/css?family=Orbitron:400,700|Roboto:400,700italic,700);
 
-
+@include fontFace(graphicmedium, '../../css/fonts/graphicmedium-webfont');
 
 body,html
 {
-    font-family: Roboto, Arial, Sans-Serif ;
+    font-family: graphicmedium, Arial, Sans-Serif ;  
     height: 100%;
     font-size: 62.5%;
-    font-weight: 400;
+    
     
     
     @include forLargeScreens(640) {
