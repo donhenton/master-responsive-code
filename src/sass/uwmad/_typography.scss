@@ -1,0 +1,65 @@
+/*
+from
+http://www.modularscale.com/?16,1280,16.842374276836924&px&1.618
+The modular scale code 
+
+*/
+@import url(https://fonts.googleapis.com/css?family=Palanquin:400,700); /* font-family 'Palanquin' sans serif */
+@import url(https://fonts.googleapis.com/css?family=Orbitron:400,700|Roboto:400,700italic,700);
+
+@include fontFace(graphikmedium, '../../css/fonts/graphikmedium-webfont');
+@include fontFace(garamondregular, '../../css/fonts/garamondregular-webfont');
+
+body,html
+{
+    font-family: graphicmedium, Arial, Sans-Serif ;  
+    height: 100%;
+    font-size: 62.5%;
+
+
+
+    @include forLargeScreens(640) {
+        font-size: 75%;
+    }
+
+
+}
+
+/*$modularscale: (
+base: 16px 1280px,
+ratio: 1.618
+);*/
+
+$modularscale: (
+base: 16px 1024px,
+ratio: 1.618
+);
+
+h1
+{
+    font-size: ms(4);
+}
+
+
+h2
+{
+    font-size: ms(3);
+}
+h3
+{
+    font-size: ms(2);
+}
+
+p
+{
+    margin: 1.25rem 0rem;
+
+
+}
+
+blockquote
+{
+    margin-left: 2rem;
+
+}
+

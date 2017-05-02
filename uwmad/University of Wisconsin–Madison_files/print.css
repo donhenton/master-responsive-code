@@ -1,0 +1,218 @@
+html,
+body {
+  background-color: transparent;
+  font-size: 18pt !important; }
+
+a[href]:after {
+  content: "  <" attr(href) "> ";
+  font-size: 12pt; }
+
+svg[aria-hidden="true"] {
+  display: none; }
+
+.show-for-sr {
+  display: none; }
+
+button {
+  font-size: 14pt;
+  margin-top: 1rem; }
+
+.show-for-sr {
+  display: initial; }
+
+.slick-dots {
+  display: none !important; }
+
+blockquote {
+  margin-left: 0 !important; }
+
+h1.uw-mini-bar {
+  font-size: 2rem !important; }
+
+#uw-crest-wordmark img {
+  display: block !important; }
+
+#uw-crest-wordmark {
+  background-color: transparent;
+  width: 100%;
+  height: auto; }
+  #uw-crest-wordmark h1 {
+    margin: 1rem;
+    margin-left: 0;
+    padding: 0;
+    width: 100%; }
+    #uw-crest-wordmark h1 img {
+      width: 40% !important;
+      height: auto !important; }
+
+a#uw-crest-wordmark[href]:after {
+  content: initial; }
+
+.svg-icons,
+#uw-crest-wordmark img:first-child,
+#uw-crest-wordmark img:last-child,
+#uw-mobile-title-bar,
+#uw-top-menus-search,
+#uw-footer-action,
+#uw-footer-link-o-rama,
+footer span {
+  display: none !important; }
+
+main {
+  margin: 0;
+  padding: 0; }
+
+#header .show-for-sr {
+  display: none; }
+
+footer,
+#uw-footer-copyright {
+  display: block;
+  float: none;
+  clear: both;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+  margin-top: 1in;
+  color: #000000;
+  background-color: transparent;
+  text-align: center;
+  font-size: 12pt; }
+
+.carousel-1 {
+  display: none !important; }
+  .carousel-1 div[style] {
+    display: none !important; }
+
+.carousel-2 div[style] {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  transform: none !important;
+  position: static !important;
+  left: 0 !important;
+  opacity: 1 !important; }
+  .carousel-2 div[style] img {
+    display: block !important;
+    width: auto !important;
+    height: auto !important; }
+
+.carousel-2 button {
+  display: none !important; }
+
+ul.uw-panels {
+  margin-left: 0 !important;
+  padding: 0;
+  list-style-type: none; }
+  ul.uw-panels li {
+    margin-left: 0 !important;
+    margin-bottom: 1rem; }
+
+body.home #uw-featured-hero .show-for-sr {
+  display: block;
+  float: none;
+  clear: both; }
+
+body.home #uw-featured-hero img {
+  float: none;
+  clear: both; }
+
+#uw-featured-hero #uw-featured-hero-info-wrapper #uw-featured-hero-info-wrapper-inner #uw-button-featured-hero-info {
+  display: none; }
+
+.uw-hero-carousel .show-for-sr {
+  display: none; }
+
+.uw-hero-carousel div[style] {
+  width: 100% !important; }
+
+.uw-hero-carousel img {
+  width: 100% !important; }
+
+.uw-hero-carousel button {
+  background: none;
+  border: none; }
+
+button {
+  font-family: inherit;
+  padding: 0;
+  font-size: 1.17em;
+  font-weight: bold; }
+
+.uw-box {
+  margin-top: 1rem; }
+
+.uwhc-arrow {
+  display: none; }
+
+#wisconsin-idea blockquote {
+  margin-left: 0 !important;
+  font-style: italic; }
+
+#wi-map {
+  display: none; }
+
+.factoids h3 {
+  margin: 0; }
+
+#academics-tabs {
+  display: none; }
+
+body.academics .photo-credit {
+  display: none; }
+
+body.directory main .directory-results {
+  font-size: 14pt; }
+  body.directory main .directory-results h1 + a + div#people {
+    margin-top: 1em; }
+  body.directory main .directory-results form {
+    display: none; }
+  body.directory main .directory-results .people_count {
+    font-style: italic; }
+  body.directory main .directory-results .person {
+    margin-bottom: 1em; }
+    body.directory main .directory-results .person .person_name {
+      font-weight: bold; }
+      body.directory main .directory-results .person .person_name .aka {
+        font-weight: normal; }
+    body.directory main .directory-results .person .person_more {
+      display: none; }
+    body.directory main .directory-results .person .row {
+      float: none;
+      clear: both;
+      display: block;
+      width: 100%;
+      height: auto; }
+      body.directory main .directory-results .person .row div:first-child {
+        display: block;
+        width: 25%;
+        height: auto;
+        float: left;
+        text-align: right;
+        margin-bottom: 1em; }
+      body.directory main .directory-results .person .row div:last-child {
+        display: block;
+        width: calc(75% - 1rem);
+        height: auto;
+        margin-left: 1rem;
+        float: right;
+        margin-bottom: 1em; }
+    body.directory main .directory-results .person .person_address_room {
+      margin-bottom: 2em; }
+  body.directory main .directory-results a[href^=mailto]:after {
+    content: normal; }
+  body.directory main .directory-results .terms-of-use {
+    display: none; }
+
+#uw-news {
+  page-break-before: always; }
+
+.hide-for-print {
+  display: none; }
+
+.page-break-before {
+  page-break-before: always; }
+
+.page-break-after {
+  page-break-after: always; }

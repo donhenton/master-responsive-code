@@ -3,3 +3,9 @@ https://demo.agektmr.com/flexbox/
 zoom level
 
 http://stackoverflow.com/questions/9798331/zoom-a-browser-window-view-with-javascript
+
+<img src="/images/home/hero/historical-society-1600.jpg" 
+alt="Long view of the state library's reading room" 
+srcset="/images/home/hero/historical-society-640.jpg 640w,
+/images/home/hero/historical-society-880.jpg 880w,
+/images/home/hero/historical-society-1600.jpg 1600w" sizes="100vw">
