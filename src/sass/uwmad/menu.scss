@@ -74,8 +74,9 @@ nav.large-nav
     display: inherit;
     font-size: ms(4);
     text-align: center;
-    margin-top: 2rem;
-
+    //margin-top: 2rem;
+    margin-top: -2px;
+    position: relative;
 
 
     .mobile-nav-switch
@@ -90,12 +91,17 @@ nav.large-nav
         }
         border-bottom: 2px solid $color-primary-4;
         cursor: pointer;
+        background-color:white;
+        padding: 1rem;
+        z-index:10;
     }
 
     .mobile-nav-menu
     {
-        padding: 3rem 0rem;
-        
+        padding: 1rem 0rem;
+        position:absolute;
+        top:-190px;
+        z-index: -10;
         border-bottom: 2px solid $color-primary-4;
          
         .flex-container {
@@ -103,10 +109,10 @@ nav.large-nav
 
             display: flex;
             flex-wrap: wrap;
-
+            //background-color:red;
             .mobile-menu-item
             {
-                padding: 2rem;
+                padding:  2rem;
                 background-color: $color-secondary-1-4;
                 color: white;
                 margin: 1%;

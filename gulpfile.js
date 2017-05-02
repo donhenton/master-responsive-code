@@ -140,7 +140,7 @@ gulp.task('copy-assets', function () {
 
 });
 
-gulp.task('copy--uw-assets', function () {
+gulp.task('copy-uw-assets', function () {
 
     gulp.src(['./src/js/uwmad/**/*'])
             .pipe(gulp.dest(targetLocation + '/js'));
@@ -165,6 +165,6 @@ gulp.task('serve', function (done) {
 });
 
 gulp.task('default', gulpsync.sync(['clean', 'sass', 'watch', 'serve']));
-gulp.task('uwmad', gulpsync.sync(['clean', 'sass-uwmad', 'copy--uw-assets', 'watch-uwmad', 'serve']));
+gulp.task('uwmad', gulpsync.sync(['clean', 'sass-uwmad', 'copy-uw-assets', 'watch-uwmad', 'serve']));
 gulp.task('mycode', gulpsync.sync(['clean', 'sass-my-code', 'copy-assets', 'watch-mycode', 'serve']));
 gulp.task('future', gulpsync.sync(['clean', 'sass-future', 'copy-assets', 'watch-future', 'serve']));
