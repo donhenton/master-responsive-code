@@ -12,14 +12,12 @@ The modular scale code
 
 body,html
 {
-    font-family: graphicmedium, Arial, Sans-Serif ;  
-    height: 100%;
-    font-size: 62.5%;
-
-
+     font-family: graphicmedium, Arial, Sans-Serif ;  
+     font-size: 62.5%;
+      
 
     @include forLargeScreens(640) {
-        font-size: 75%;
+         font-size: 75%;
     }
 
 

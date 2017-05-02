@@ -1,75 +1,65 @@
-<!--
-Chapter 4: CSS Grids, Frameworks, UI Kits and Flexbox
-20 - HTML for the Build a Sample Page with Flexbox section
--->
+
 
 <!DOCTYPE html>
-<!--[if IE 8]> <html class="no-js ie8" lang="en"> <![endif]-->
-<!--[if IE 9]> <html class="no-js ie9" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Basic Layout Using Flexbox</title>
-        <link href="build/css/site-styles.css" rel="stylesheet" type="text/css"/>
-        <!--[if lt IE 9]>
-         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-        <!--[if !IE]><!-->
-        <script>
-            if (/*@cc_on!@*/false && document.documentMode === 10) {
-                document.documentElement.className += ' ie10';
-            }
-        </script>
-        <!--<![endif]-->
-    </head>
-    <body>
-        <h1>Basic Layout Using Flexbox</h1>
-        <main class="main-container" role="main">
-            <header role="banner">Header</header>
-            <nav role="navigation">Nav</nav>
-            <!-- Flexible elements need to be wrapped in a container -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Responsive Demo</title>
+    <link href="build/css/site-styles.css" rel="stylesheet" type="text/css"/>
+    <!--[if lt IE 9]>
+     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if !IE]><!-->
+    <script>
+        if (/*@cc_on!@*/false && document.documentMode === 10) {
+            document.documentElement.className += ' ie10';
+        }
+    </script>
+    <!--<![endif]-->
+</head>
+<body>
+
+    <main class="main-container">
+        <nav class='large-nav'>
+            <menu>
+                <ul>
+                    <li class="menu-item"><a href="#">menu1</a></li>
+                    <li class="menu-item"><a href="#">menu2</a></li>
+                    <li class="menu-item"><a href="#">menu3</a></li>
+                    <li class="menu-item"><a href="#">menu4</a></li>
+                </ul>
+            </menu>
+        </nav>
+        <header class='masthead-image'>
+
+            <img src="/images/home/historical-society-1600.jpg" 
+                 alt="Long view of the state library's reading room" 
+                 srcset="/images/home/historical-society-640.jpg 640w,
+                 /images/home/historical-society-880.jpg 880w,
+                 /images/home/historical-society-1600.jpg 1600w" sizes="100vw">
 
 
-            <section>
-                <div class="flex-container row-1">
-                    <div class="level-1">content</div>
-                    <div class="level-1">content</div>
-                </div>
-                <div class="flex-container row-2">
-                    <div class="level-1">content</div>
-                    <div class="level-1">content</div>
-                    <div class="level-1">content</div>
-                </div>
-                <div class="flex-container row-3">
-                    <div class="level-1">content</div>
-                    <div class="level-1 bigger">CONTENT</div>
-                    <div class="level-1">content</div>
-                    <div class="level-1">content</div>
-                </div>
-                <div class="flex-container row-4">
-                    <div class="level-1 content-70">70 content</div>
+        </header>
+        <section class='mobile-nav-container'>
 
-                    <div class="level-1 content-30">30 content</div>
-                </div>
+            <header class='mobile-nav-switch'>Menu </header>
+            <nav class='mobile-nav-menu'>
+                <menu class='flex-container'>
 
-            </section>
+                    <div class="content-50  mobile-menu-item"><a href="#">menu1</a></div>
+                    <div class="content-50  mobile-menu-item"><a href="#">menu2</a></div>
+                    <div class="content-50  mobile-menu-item"><a href="#">menu3</a></div>
+                    <div class="content-50  mobile-menu-item"><a href="#">menu4</a></div>
 
-            <section>
-                <div class="flex-container row-1">
-                    <div class="level-1"> 
-                        <div class="level-1">Header</div>
-                        <div class="leve-2 flex-container">
-                            <div class="level-1  content-70">70 content</div>
 
-                            <div class="level-1  content-30">30 content</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
-            <footer role="contentinfo">Footer</footer>
-        </main>
-    </body>
+                </menu>
+            </nav>
+        </section>   
+        <!-- Flexible elements need to be wrapped in a container -->
+
+    </main>
+</body>
 </html>
