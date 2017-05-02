@@ -13,4 +13,5 @@ Code Exploration for [Mastering Responsive Code](https://www.packtpub.com/web-de
 
 ## Responsive demo
 * use gulp mycode to run the github demo locally
+* gulp mycode uses the UW Madison demo code
 

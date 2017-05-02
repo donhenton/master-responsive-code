@@ -1,0 +1,88 @@
+/*
+Chapter 4: CSS Grids, Frameworks, UI Kits and Flexbox
+18 - Add the Row and Float Clearing Rules
+*/
+
+@charset "UTF-8";
+
+/*
+    Custom Fluid & Responsive Grid System
+    Structure: Mobile-first (min-width)
+    Syntax: SCSS
+    Grid: Float-based
+    Created by: Your Name
+    Date: MM/DD/YY
+*/
+/*
+
+this is in the _reset
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+*/
+
+
+
+
+
+.container-12 {
+    width: 100%;
+    //Change this value to ANYTHING you want, no need to edit anything else.
+    max-width: 1250px;
+    padding: 0 .67%;
+    margin: auto;
+     
+}
+
+
+.grid {
+    //Global Properties - Mobile-first
+/*    &-1, &-2, &-3, &-4, &-5, &-6, &-7, &-8, &-9, &-10, &-11, &-12 {
+      //  width: 100%;  
+    }*/
+    //Totally arbitrary width, it's only a starting point
+    @include forLargeScreens(640) {
+        //Global Properties - Large screens
+        &-1, &-2, &-3, &-4, &-5, &-6, &-7, &-8, &-9, &-10, &-11, &-12 {
+            float: left;
+            margin: 0 .83%;
+             
+             
+        }
+        //Grid 12 Columns
+        .grid {
+            &-1  { width:6.67%; }
+            &-2  { width:15%; }
+            &-3  { width:23.33%; }
+            &-4  { width:31.67%; }
+            &-5  { width:40%; }
+            &-6  { width:48.33%; }
+            &-7  { width:56.67%; }
+            &-8  { width:65%; }
+            &-9  { width:73.33%; }
+            &-10 { width:81.67%; }
+            &-11 { width:90%; }
+            &-12 { width:98.33%; }
+        }
+    }
+}
+
+ 
+ 
+//Clear Floated Elements - http://davidwalsh.name/css-clear-fix
+/*.clear, .row {
+    &:before,
+        &:after { content: ''; display: table; }
+    &:after { clear: both; }
+}*/
+
+
+//Use rows to nest containers
+.grid-row { margin-bottom: 10px;
+       &:last-of-type { margin-bottom: 0; }
+        
+}
+
+//Legacy IE
+.clear { zoom: 1; }
