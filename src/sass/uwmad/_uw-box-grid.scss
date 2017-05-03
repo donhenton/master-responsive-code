@@ -1,19 +1,26 @@
-.sub-container {
-     margin: 1%;
-   
+.content-section
+{
      
+}
+
+.sub-container {
+    margin: 1%;
+    display: flex;
+    flex-wrap: wrap;
+ 
+
     @include forLargeScreens(640) {
-        
-        display: flex;
+
+
     } 
 
 
     //DIVs inside the flex container
     [class*="level-"] {
-        width: 48%;
-        
+
+        height: 15rem;
         @include forLargeScreens(640) {
-              margin-right: .2rem  ;
+
         }
         border: thin solid black;
         &:first-of-type { margin-left: 0; }
@@ -23,32 +30,41 @@
 
         &.content- {
 
-            //will be colored if you are greater than 640
-            //otherwise back to black
-            //oddball percentages force adjustment of boxes
-             background-color: blue;
-              &70 {  background-color: blue;   
-                     color: yellow; }
-                &30 {  background-color: blue;   
-                     color: yellow; }
-             
-             
-            @include forLargeScreens(640) {
-               
-                
-                &70 { width: 70%;background-color: red;  
-                     color: yellow; }
-                &30 { width: 30%;background-color: red;  
-                     color: yellow; }
-                  
 
-            } 
-            
-          
+            &50
+            {
+                width:100%;
+                margin: 0%;
+                @include forLargeScreens(640) {
+                    width:50%;
+                    &.small-margin
+                    {
+                        width:49%;
+
+                    }
+
+                } 
+                &.small-margin
+                {
+                    margin: 0%;
+                    @include forLargeScreens(640) {
+                        margin: 1%;
+                        &:first-of-type
+                            {
+                            margin-left: 0%;
+                        }
+                        &:last-of-type
+                            {
+                            margin-right: 0%;
+                        }
+                    }
+                }
+            }
+
         }
     }
 
 
 
-  
+
 }

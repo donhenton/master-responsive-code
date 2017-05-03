@@ -14,10 +14,7 @@ $(function () {
             disp = '-190px';
         }
 
-        $('.mobile-nav-menu').animate({
-
-            top: disp
-        }, 350, function () {
+        $('.mobile-nav-menu').slideToggle('fast' ,  function () {
            
             $(this).toggleClass('active');
             $('#close-symbol').toggleClass('hide');
