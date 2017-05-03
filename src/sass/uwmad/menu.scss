@@ -81,19 +81,36 @@ nav.large-nav
 
     .mobile-nav-switch
     {
-        &:after {
-            display: inline;
-            padding: 2.5rem;
-            font-size: ms(5);
-            content: '≡';
-            vertical-align: middle;
-            line-height: 1;
-        }
+        
         border-bottom: 2px solid $color-primary-4;
         cursor: pointer;
         background-color:white;
         padding: 1rem;
         z-index:10;
+        
+        .hide
+        {
+            display: none;
+        }
+        
+        #svg-close
+        {
+            display: none;
+           
+        }
+        
+        #svg-menu
+        {
+           // display: none;
+           
+        }
+        
+        svg
+        {
+             
+           
+            vertical-align: middle;
+        }
     }
 
     .mobile-nav-menu

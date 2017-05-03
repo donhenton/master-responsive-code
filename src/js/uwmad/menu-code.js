@@ -18,7 +18,10 @@ $(function () {
 
             top: disp
         }, 350, function () {
+           
             $(this).toggleClass('active');
+            $('#close-symbol').toggleClass('hide');
+            $('#menu-symbol').toggleClass('hide');
         });
 
 
