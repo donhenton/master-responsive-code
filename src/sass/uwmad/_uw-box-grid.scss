@@ -15,7 +15,7 @@
         &.small-margin
         {
             width: ($largeWidth -$diff);
-            background-color:red;
+             
         }
 
     } 
@@ -86,32 +86,12 @@
 
             &50
             {
-                width:100%;
-                margin: 0%;
-                @include forLargeScreens(640) {
-                    width:50%;
-                    &.small-margin
-                    {
-                        width:49%;
-                        background-color:green;
-                    }
-
-                } 
-                &.small-margin
-                {
-                    margin: 0%;
-                    @include forLargeScreens(640) {
-                        margin: 1%;
-                        &:first-of-type
-                            {
-                            margin-left: 0%;
-                        }
-                        &:last-of-type
-                            {
-                            margin-right: 0%;
-                        }
-                    }
-                }
+                 @include subColumns(50%,1%,&)
+            }
+            
+            &25
+            {
+                 @include subColumns(23.5%,0%,&)
             }
 
         }
