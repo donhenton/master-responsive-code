@@ -1,9 +1,8 @@
-@import "uwmad/colors.scss";
+@import "uwmad/_colors.scss";
 @import "components/_reset.scss";
 @import "uwmad/_mixins.scss";
 @import "uwmad/_modularscale.scss"; 
 @import "uwmad/_typography.scss";
-@import "uwmad/_uw-box-grid.scss";
-@import "uwmad/menu.scss";
-
-
+@import "uwmad/_box-grid.scss";
+@import "uwmad/_menu.scss";
+@import "uwmad/_columns.scss";

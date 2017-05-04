@@ -59,7 +59,7 @@
     {
 
         height:  $amt+rem;
-        background-color:red;
+
     }
 }
 
@@ -71,11 +71,7 @@
 
     @include rowMargin(1);
     @include heightClass(5);
-    @include forLargeScreens(640) {
-
-
-    } 
-
+    @include heightClass(10);
 
     //DIVs inside the flex container
     [class*="level-"] {
@@ -84,7 +80,7 @@
         @include forLargeScreens(640) {
 
         }
-        border: thin solid black;
+
         &:first-of-type { margin-left: 0; }
         &:last-of-type { margin-right: 0; }
 
@@ -123,5 +119,16 @@
         }
     }
 
+    /* start box attributes */
 
+    &.footer
+    {
+        background-color: $color-primary-0;
+        color: $color-primary-1;
+        font-size: ms(3);
+        text-align: center;
+        padding: 2%;
+    }
+
+  /* end sub-container */
 }

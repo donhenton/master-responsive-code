@@ -1,0 +1,46 @@
+.block-text
+{
+    padding: 2%;
+
+    border-right: thin dashed $color-secondary-2-3;
+    &:last-of-type { border-right: none; }
+}
+
+
+.content-list 
+{ 
+    li{
+        list-style-type: none;
+        font-size: ms(0);
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 2rem;
+
+        -webkit-font-smoothing: antialiased;
+        display: inherit;
+        text-decoration: inherit;
+        &:before {
+
+            display: inline-block;
+            font-size: ms(1);
+            vertical-align: middle;
+            font-family: "foundation-icons";
+            // margin-left: - 1.5em;
+            width: 1.5em;
+            color: $color-secondary-2-2;
+            content: "\f1ef";
+        }
+    }
+    
+    .title
+    {
+        font-family: Orbitron;
+        font-weight:700;
+    }
+    .body
+    {
+        padding-left: 4%;
+    }
+}
