@@ -40,28 +40,37 @@
 }
 //end mixin
 
-@mixin rowMargin($parent,$amt)
+@mixin rowMargin($amt)
 {
     $per: percentage($amt/100);
-    
+
     &.row-#{$amt}
     {
         margin-top: $per ;
-        
+        // height:  5rem;
     }
 }
 
+@mixin heightClass($amt)
+{
 
+
+    &.height-#{$amt}
+    {
+
+        height:  $amt+rem;
+        background-color:red;
+    }
+}
 
 .sub-container {
     //margin: 1%;
     display: flex;
     flex-wrap: wrap;
-     
-
-    @include rowMargin(&,1)
 
 
+    @include rowMargin(1);
+    @include heightClass(5);
     @include forLargeScreens(640) {
 
 
@@ -71,7 +80,7 @@
     //DIVs inside the flex container
     [class*="level-"] {
 
-        height: 15rem;
+
         @include forLargeScreens(640) {
 
         }
@@ -109,7 +118,7 @@
             &25-nomargin
             {
                 @include subColumns(25%,0%,&)
-                
+
             }
         }
     }
