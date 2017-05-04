@@ -38,6 +38,8 @@
 
 .content-list 
 { 
+    
+     
     li{
         list-style-type: none;
         font-size: ms(0);
@@ -53,7 +55,7 @@
         &:before {
 
             display: inline-block;
-            font-size: ms(1);
+            font-size: ms(3);
             vertical-align: middle;
             font-family: "foundation-icons";
             // margin-left: - 1.5em;
@@ -68,10 +70,12 @@
         font-family: Orbitron;
         font-weight:700;
         color: $color-secondary-2-4;
+         
     }
     .body
     {
         padding-left: 4%;
+        margin-top: 1.5rem;
     }
 }
 
