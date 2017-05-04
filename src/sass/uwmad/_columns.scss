@@ -2,8 +2,37 @@
 {
     padding: 2%;
 
-    border-right: thin dashed $color-secondary-2-3;
-    &:last-of-type { border-right: none; }
+
+    border-bottom: thin dashed $color-secondary-2-3;
+    &:last-of-type { border-bottom: none; }
+
+    @include forLargeScreens(640) {
+        border-right: thin dashed $color-secondary-2-3;
+        border-bottom: none;
+        &:last-of-type { border-right: none; }
+    }
+
+
+
+    .small-text
+    {
+
+    }
+
+
+    .text-entry
+    {
+        padding: 2%;
+    }
+
+    .img-sized
+    {
+
+        width: 85%;
+        height: auto;
+    }
+
+
 }
 
 
@@ -33,14 +62,44 @@
             content: "\f1ef";
         }
     }
-    
+
     .title
     {
         font-family: Orbitron;
         font-weight:700;
+        color: $color-secondary-2-4;
     }
     .body
     {
         padding-left: 4%;
     }
+}
+
+
+.big-block
+{
+    border: 3px solid $color-secondary-2-4;
+    color: $color-secondary-2-4;
+    height:20rem;
+    padding: 3%;
+    text-align: center;
+    margin-top: 1.5rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-secondary-2-2;
+    
+    .block-contents
+    {
+         font-size: ms(3);
+             
+         .icon
+         {
+             font-size: ms(5)
+         }
+         
+    }
+    
+    
 }

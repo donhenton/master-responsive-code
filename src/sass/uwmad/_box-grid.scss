@@ -97,6 +97,16 @@
             {
                 @include subColumns(30%,1%,&)
             }
+            
+            &60
+            {
+                @include subColumns(60%,1%,&)
+            }
+
+            &40
+            {
+                @include subColumns(40%,1%,&)
+            }
             &100
             {
                 @include subColumns(100%,0%,&)
