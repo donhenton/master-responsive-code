@@ -1,13 +1,53 @@
 .content-section
 {
-     
+
 }
+
+
+@mixin subColumns($largeWidth,$diff,$parent)
+{
+
+    width:100%;
+    margin: 0%;
+    @include forLargeScreens(640) {
+        width:$largeWidth;
+
+        &.small-margin
+        {
+            width: ($largeWidth -$diff);
+            background-color:red;
+        }
+
+    } 
+    &.small-margin
+    {
+        margin: 0%;
+        @include forLargeScreens(640) {
+            margin: 1%;
+            &:first-of-type
+                {
+                margin-left: 0%;
+            }
+            &:last-of-type
+                {
+                margin-right: 0%;
+            }
+        }
+    }
+
+
+}
+//end mixin
+
+
+
+
 
 .sub-container {
     margin: 1%;
     display: flex;
     flex-wrap: wrap;
- 
+
 
     @include forLargeScreens(640) {
 
@@ -30,6 +70,19 @@
 
         &.content- {
 
+            &70
+            {
+                @include subColumns(70%,1%,&)
+            }
+
+            &30
+            {
+                @include subColumns(30%,1%,&)
+            }
+            &100
+            {
+                @include subColumns(100%,0%,&)
+            }
 
             &50
             {
@@ -40,7 +93,7 @@
                     &.small-margin
                     {
                         width:49%;
-
+                        background-color:green;
                     }
 
                 } 
