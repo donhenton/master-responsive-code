@@ -15,7 +15,7 @@
         &.small-margin
         {
             width: ($largeWidth -$diff);
-             
+
         }
 
     } 
@@ -23,7 +23,8 @@
     {
         margin: 0%;
         @include forLargeScreens(640) {
-            margin: 1%;
+            margin-right: 1%;
+            margin-left: 1%;
             &:first-of-type
                 {
                 margin-left: 0%;
@@ -39,14 +40,26 @@
 }
 //end mixin
 
-
+@mixin rowMargin($parent,$amt)
+{
+    $per: percentage($amt/100);
+    
+    &.row-#{$amt}
+    {
+        margin-top: $per ;
+        
+    }
+}
 
 
 
 .sub-container {
-    margin: 1%;
+    //margin: 1%;
     display: flex;
     flex-wrap: wrap;
+     
+
+    @include rowMargin(&,1)
 
 
     @include forLargeScreens(640) {
@@ -86,18 +99,20 @@
 
             &50
             {
-                 @include subColumns(50%,1%,&)
+                @include subColumns(50%,1%,&)
             }
-            
+
             &25
             {
-                 @include subColumns(23.5%,0%,&)
+                @include subColumns(23.5%,0%,&)
             }
-
+            &25-nomargin
+            {
+                @include subColumns(25%,0%,&)
+                
+            }
         }
     }
-
-
 
 
 }
