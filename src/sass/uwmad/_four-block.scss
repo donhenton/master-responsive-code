@@ -1,13 +1,33 @@
-.four-block-container
+.sub-container.four-block-container
 {
     margin-top: 1%;
+
     .four-block-entry
     {
-        
-         
+
+
         background-color: $color-primary-4;
         color: white;
-        
+        border-right: none;
+        border-bottom: thin solid $color-primary-1;
+        &:last-of-type
+            {
+            border-bottom: none;
+        }
+        padding: 2%;
+
+        @include forLargeScreens(640) {
+
+            border-right: thin solid $color-primary-1;
+            border-bottom: none;
+            &:last-of-type
+                {
+                border-right: none;
+            }
+
+
+        } 
+
         .block-1
         {
             text-align: left;
@@ -15,22 +35,25 @@
             padding: 10%;
             font-size: ms(0);
         }
-        
+
         .block-header
         {
             margin: 5%;
             font-family: Orbitron;
             font-size: 2rem;
             font-weight: 700;
+
         }
-        
-        
+
+
     }
     display: flex;
-    flex: row wrap;
-    display: flex;
+    //flex: row wrap;
+    //flex: 1 0 auto;
+
+
     //https://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/
-    align-items: center;
+    align-items:stretch;
     justify-content: center;
     padding: 4%;
     background-color: $color-secondary-1-1;
