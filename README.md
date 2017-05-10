@@ -4,7 +4,7 @@ Code Exploration for [Mastering Responsive Code](https://www.packtpub.com/web-de
 
 ## Running
 * gulp to start the livereload server
-* navigate to the current page of interestg under the public_html folder.
+* navigate to the current page of interest under the public_html folder.
 * index.html is the default if that is useful
 
 ## Demonstration
@@ -12,6 +12,7 @@ Code Exploration for [Mastering Responsive Code](https://www.packtpub.com/web-de
 
 
 ## Responsive demo
-* use gulp mycode to run the github demo locally
-* gulp mycode uses the UW Madison demo code
+* use gulp uwmad to run the github demo locally
+* gulp uwmad uses the UW Madison demo code
+* 
 
