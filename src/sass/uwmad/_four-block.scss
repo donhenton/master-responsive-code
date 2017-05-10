@@ -16,19 +16,8 @@
         }
         padding: 2%;
 
+
         @include forLargeScreens(640) {
-
-            border-right: thin solid $color-primary-1;
-            border-bottom: none;
-            &:last-of-type
-                {
-                border-right: none;
-            }
-            width: 25%;
-
-        } 
-
-        @include forLargeScreens(850) {
 
             width: 50%;
             border-right: thin solid $color-primary-1;
@@ -40,6 +29,19 @@
             }
 
         } 
+
+        @include forLargeScreens(850) {
+
+            border-right: thin solid $color-primary-1;
+            border-bottom: none;
+            &:last-of-type
+                {
+                border-right: none;
+            }
+            width: 25%;
+
+        } 
+
 
         .block-1
         {
