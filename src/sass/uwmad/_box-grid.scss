@@ -97,6 +97,10 @@
             {
                 @include subColumns(30%,1%,&)
             }
+            &33
+            {
+                @include subColumns(32%,1%,&)
+            }
 
             &60
             {
@@ -131,15 +135,7 @@
 
     /* start box attributes */
 
-    &.footer,&.row-header
-    {
-        background-color: $color-primary-0;
-         color: $color-primary-1;
-       
-        font-size: ms(2);
-        text-align: center;
-        padding: 2%;
-    }
+   
     &.row-header
     {
 
@@ -147,7 +143,7 @@
         align-content: center;
         justify-content: center;
         align-items: center;
-       
+
         .row-text
         {
 
@@ -157,3 +153,12 @@
 }
 
 
+ .row-separator
+    {
+        background-color: $color-primary-0;
+        color: $color-primary-1;
+
+        font-size: ms(2);
+        text-align: center;
+        padding: 2%;
+    }
