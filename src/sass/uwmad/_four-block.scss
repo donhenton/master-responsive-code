@@ -24,7 +24,20 @@
                 {
                 border-right: none;
             }
+            width: 25%;
 
+        } 
+
+        @include forLargeScreens(850) {
+
+            width: 50%;
+            border-right: thin solid $color-primary-1;
+            border-bottom: thin solid $color-primary-1;
+            &:last-of-type
+                {
+                border-right: none;
+                border-bottom: none;
+            }
 
         } 
 
