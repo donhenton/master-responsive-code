@@ -1,6 +1,7 @@
 footer
 {
 
+    background-color: $color-secondary-1-1;
     .logo-text
     {
         font-family: graphikregularitalic;
@@ -21,11 +22,12 @@ footer
     .text-list-container
     {
         text-align: left;
-        font-size: ms(1);
+        
 
             li
             {
                 margin-top: 2rem;
+                font-size: ms(1);
               //  display: inline-block;
                 font-family:'foundation-icons';
                 
@@ -38,6 +40,7 @@ footer
             .list-text
             {
                 margin-left: 4%;
+                font-size: ms(0)
             }
         }
     }
@@ -59,20 +62,26 @@ footer
     .footer-group
     {
         border-right: none;
-        border-bottom: thin solid $color-primary-1;
-        padding: 0% 4%;
+        margin-bottom: 2%!important;
+        background-color: $color-primary-0;
+        color: $color-primary-1;
+        font-size: ms(2);
+        text-align: center;
+        padding: 4% 4%;
         
         &:last-of-type
             {
 
-            border-bottom: none;
+            margin-bottom: none;
+            
         }
 
         @include forLargeScreens(640) {
 
 
             border-right: thin solid $color-primary-1;
-            border-bottom: none;
+            margin-bottom: none;
+            padding: 0% 4%;
             &:last-of-type
                 {
                 border-right: none;
